@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calcolatrice{
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0;
+    border: 1px dashed lightblue;
+}
+.calcolatrice *{
+   margin: 5px;
+}
+
+.calcolatrice input,select{
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+button{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+li {
+    margin: 10px 8px;
+}

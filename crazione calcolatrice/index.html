@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Document</title>
+</head>
+<body>
+   <div id="app">
+      <h1>Calcolatrice con memoria</h1>
+     <div class="calcolatrice">
+         <input type="number" v-model="numOne" placeholder="Inserisci un numero" >
+         <select id="calculator" name="operatori" v-model="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+         </select>
+         <input type="number" v-model="numTwo" placeholder="Inserisci un numero">
+         <span>=</span>
+         <!-- qui va il risultato dell'operazione  -->
+         <span >{{result}}</span>
+         <br>
+         <button @click="doubleFunction" >calcola</button>
+     
+         <!-- qui vanno le operazioni precedenti  -->
+      </div>
+      <h2>Operazioni Precedenti</h2>
+      <ul>
+         <!-- creare un li per ogni operazione svolta  -->
+         <li v-for="(operation, index) in recentOpeation" >{{ operation }}</li>
+      </ul>
+      <div class="operarioni-precedenti">
+
+      </div>
+      <button @click="cancelMemory">svuota memoria</button>
+   </div>
+    
+   <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+   <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
